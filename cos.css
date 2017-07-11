@@ -1,0 +1,378 @@
+html, body{
+    height: 100%;
+    margin:0;
+}
+.navbar{
+    height: auto;
+    min-height: 80px;
+    position: relative;
+    opacity: .7;
+}
+h1, h4, h2{
+    font-family: "Comic Sans MS";
+    color: greenyellow;
+}
+
+/*from: http://bootsnipp.com/snippets/featured/navbar-brand-centered*/
+@media screen and (min-width:468px){
+    .navbar-brand-centered {
+        position: absolute;
+        left: 46.5%; /*this i changed; it was 50%*/
+        display: block;
+        text-align: center;
+        padding-top: 0%;
+    }
+    .navbar>.container .navbar-brand-centered,
+    .navbar>.container-fluid .navbar-brand-centered {
+        margin-left: -80px;
+    }
+}
+@media screen and (max-width: 468px){
+    .navbar-brand-centered{
+        text-align: left;
+        padding-top: 0%;
+        padding-left: 0%;
+    }
+    .navbar-brand > img{
+        width: 150px;
+        height: 38px;
+    }
+}
+.navbar-nav{
+    margin-top: 1em;
+}
+h1{
+    font-family: "Calibri Light";
+    font-size: 35px;
+    text-align: center;
+}
+
+label{
+    width:200px;
+    display: inline-block;
+    text-align: right;
+    font-size: 25px;
+    font-family: "Times New Roman";
+}
+#body{
+    position: relative;
+}
+#body:after{
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("Pics/DSCN1139.JPG");
+    width: 100%;
+    height: 100%;
+    opacity : 0.4;
+    z-index: -1;
+}
+#footer {
+    height: 10px;
+    width: 100px;
+    margin-left: 50%;
+    text-align: center;
+    margin-bottom: 3%;
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    opacity: 0.7;
+}
+a:hover {
+    background-color: yellow;
+}
+input{
+    margin-left: 8px;
+    height: 25px;
+    font-size: 22px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+textarea{
+    border-radius: 5px;
+}
+
+/*index*/
+#title{
+    text-align: center;
+    font-family: "Comic Sans MS";
+    color: greenyellow;
+}
+#main{
+    position: relative;
+    min-height: 100%;
+    height: auto;
+    padding-bottom: 10px;   /* Pad bottom by footer height */
+}
+.countdown{
+    text-align: center;
+    color: #d43f3a;
+    font-size: large;
+}
+.jumbotron{
+    height:175px;
+    opacity: 0.7;
+}
+#registerNow{
+    text-align: left;
+    font-size:40px;
+    color: Green;
+}
+#sideContainer{
+    width: 15em;
+    position: absolute;
+}
+.panel{
+    /*position: absolute;
+    left:0%;
+    width:20%;/*220px;*/
+    height: auto;
+    float: left;
+}
+
+.slidesjs-pagination-item{
+    display: none;
+}
+.slidesjs-navigation{
+    display:none;
+}
+a.slidesjs-stop.slidesjs-navigation{
+    display: none;
+}
+/*end index*/
+
+/*index-mobile*/
+#slides{
+    width: 70%;/*900px;*/
+    height: 65%;/*650px;*/
+    margin:  auto;
+}
+.jumbotron{
+    height:175px;
+}
+#registerNow{
+    text-align: left;
+    font-size:40px;
+    color: Green;
+}
+#sideContainer{
+    width: 15em;
+    position: absolute;
+}
+div ul li a{
+    font-size:20px;
+}
+/*end index-mobile*/
+
+/*faqs*/
+#heading{
+    text-align: center;
+    margin-top: 8%;
+}
+#accordion  {
+    width: 50%;
+    margin: 0 auto;
+}
+div ul li a {
+    font-size: 20px;
+}
+/*end faqs*/
+
+/*contact us*/
+#contactUsPage{
+    width: 100%;
+    height: 60em ;
+    opacity: .7;
+    padding-top: 2%;
+}
+#contactForm{
+    float: left;
+    width: 50%;
+
+}
+#contactInfo{
+    float: right;
+    width: 50%;
+    padding-left: 5%;
+
+}
+h2{
+    text-align: left;
+}
+div ul li a{
+    font-size:20px;
+}
+
+#messageUs{
+    width: 80%;
+    margin-left: 5%;
+}
+
+textarea{
+    margin-left: 1%;
+}
+legend{
+    text-align: left;
+}
+#submitDiv{
+    width: 100%;
+    padding-top: 3%;
+}
+input[type="submit"]{
+    height: auto;
+    width: 30%;
+    margin-left: 20%;
+    margin-right: 35%;
+}
+.contactHeader{
+    text-align: left;
+    color: #5bc0de;
+}
+.contactMainHeader{
+    text-align: left;
+}
+#msg{
+    margin-left: 1%;
+    width: 70%;
+}
+.contactInput {
+    width: 70%;
+}
+/*end contact us*/
+
+/*about us*/
+h3, h2{
+    text-align: center;
+    font-family: "Comic Sans MS";
+    color: greenyellow;
+}
+article{
+    width: 50%;
+    margin: 0 auto;
+    font-size: large;
+    font-family: "Franklin Gothic Medium";
+    text-align: justify;
+}
+#overview{
+    padding-top: 3%;
+}
+#mapContainer{
+    padding-top: 3%;
+}
+#map {
+    height: 400px;
+    width: 40%;
+    margin: 0 auto;
+}
+/*end about us*/
+
+/*application*/
+#regOptions{list-style-type: none; width: 20%; margin: inherit; margin: auto; padding: 0%}
+#firstHalf{cursor: hand;}
+#regOptions .ui-selecting { background: #707070 ; }
+#regOptions .ui-selected {
+    background: springgreen;
+}
+/*To remove arrows from zipcode txtbox*/
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+/*form{
+    margin: auto;
+}
+fieldset{
+    margin: auto;
+}
+ul li{
+    margin: auto;
+    padding: 0%;
+    cursor: hand;
+}
+legend{
+    margin: auto;
+}*/
+#dialog{
+    display: none;
+}
+#requests{
+    width: 100%;
+    font-size: large;
+}
+fieldset div{
+    align-content: center;
+    margin: 0 auto;
+    width: 45em;
+}
+div ul li a{
+    font-size:20px;
+}
+#registration{
+    margin: 0 auto;
+    width: 50%;
+}
+#regOptions{
+    text-align: center;
+}
+.error{
+    font-size: small;
+    color: #cd0a0a;
+    text-align: left;
+    margin-left: 5px;
+    width: auto;
+}
+legend{
+    text-align: center;
+    font-size: 2em;
+    font-family: "Georgia";
+    font-style: italic;
+    margin-bottom: 15px;
+}
+input[type=text]{
+    width: auto;
+    font-size: large;
+}
+.parentInfo{
+    font-family: "Calibri Light";
+    color: black;
+}
+legend{
+    margin: auto;
+}
+fieldset{
+    margin: auto;
+}
+#submit{
+    display: block;
+    margin: 0 auto;
+    size: 25px;
+    height: auto;
+}
+#submit:hover{
+    background-color: #5bc0de;     /*change color on hover*/
+}
+/*end application*/
+
+
+
+
+
+
+
+
+/*form{
+    margin: 0 auto;
+    width: 800px;
+}
+/*fieldset{
+    margin-bottom: 20px;
+}*/
+
+
+

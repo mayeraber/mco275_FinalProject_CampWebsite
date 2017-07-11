@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FAQs</title>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!--take out!
+    <script src="js/jquery-1.8.3.js"></script>-->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="JQueryUI/css/smoothness/jquery-ui-1.9.2.custom.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="cos.css">
+    <script src="JQueryUI/js/jquery-ui-1.9.2.custom.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#accordion').accordion();
+            $('#header'.load('navbar.html'));
+        })
+    </script>
+
+    <style>
+        input, textarea{
+            width: 90%;
+            height: auto;
+            border-radius: 7px;
+            font-size: larger;
+        }
+    </style>
+
+</head>
+<body>
+<section id="body">
+    <!-- Beginning of Standard navbar-->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display **for small 3 lines when screen minimized**-->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="navbar-brand navbar-brand-centered"> <a class="navbar-brand" href="index.html"><img src="COSLogo.png" width="250" height="63" alt=""></a></div>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="camper-application.html">Register <span class="sr-only">(current)</span></a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pictures <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="2016Pics.html">2016</a></li>
+                            <li><a href="2015Pics.html">2015</a></li>
+                            <li><a href="2014Pics.html">2014</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="contactUs.html">Contact Us</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <!-- End of Standard navbar-->
+    <h1 id="heading">FAQs</h1>
+    <div id="accordion">
+        <h3>When does camp start</h3>
+        <div>
+           June 27
+        </div>
+        <h3>How much does it cost</h3>
+        <div>
+            $1350 per half
+        </div>
+		<h3>What age boys is the camp geared toward</h3>
+        <div>
+           From 9th through 12th grades
+        </div>
+        <h3>Is transportation to camp provided</h3>
+        <div>
+            Of course! Just make sure to call us in advance to reserve a seat
+        </div>
+		<h3>Where do the buses leave from</h3>
+        <div>
+            We have buses going from Flatbush, Monsey, and Lakewood. If you have a large group going from a different location, give us a call and we will try to arrange transportation
+        </div>
+        <h3>What sports fields does the camp have</h3>
+        <div>
+            We have basketball, baseball, volleyball, and hockey
+        </div>
+		<h3>Does camp have a pool</h3>
+        <div>
+            Our olympic sized beautiful pool, staffed by fully trained and certified lifegaurds is open daily in the afternoon
+        </div>
+		<h3>What masechta is the camp learning this year</h3>
+        <div>
+			Masechta Sanhedrin. Gemoros will be available for purchase on the first day of camp
+        </div>
+    </div>
+    <!-- Beginning of Standard footer-->
+    <footer id= "footer">
+		©2017 COS
+	</footer>
+    <!-- End of Standard navbar-->
+</section>
+</body>
+
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Camp Ohr Shraga</title>
+    <link rel="stylesheet" href="JQueryUI/css/smoothness/jquery-ui-1.9.2.custom.min.css">
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!--take out
+    <script src="js/jquery-1.8.3.js"></script>-->
+
+    <script src="JQueryUI/js/jquery-ui-1.9.2.custom.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/additional-methods.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="cos.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#birthday").datepicker({
+                defaultDate: '01/01/1990'
+            });
+            $('#submit').button();
+            /*$('#submit').click(function () {
+                $('#dialog').dialog({modul:true})
+            })*/
+            $('#requests').resizable({
+                maxHeight: 350,
+                maxWidth: 700
+            })
+            $('#regOptions').selectable({
+
+            })
+            $('#registration').validate({
+                submitHandler: function (form) {
+                    $('#dialog').dialog({modul:true});
+
+                },
+
+                rules: {
+                    homePhone:{
+                        required: true,
+                        phoneUS: true
+                    },
+                    cellPhone:{
+                        phoneUS: true
+                    },
+                    state:{
+                        stateUS: true
+                    },
+                    zipcode:{
+                        zipcodeUS: true
+                    }
+
+                },
+            });
+            $.validator.addMethod("cRequired", $.validator.methods.required,"* This field is required");
+                $.validator.addClassRules("required", { cRequired: true, });
+            $.validator.addMethod("valEmail", $.validator.methods.email(),"Required", "Please enter a valid email address");
+             $.validator.addClassRules("email", { valEmail: true, });
+        })
+
+
+    </script>
+    <style>
+        ul li{
+            margin: auto;
+            padding: 0%;
+            cursor: hand;
+        }
+    </style>
+
+
+</head>
+<body>
+<section id="body">
+    <!-- Beginning of Standard navbar-->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display **for small 3 lines when screen minimized**-->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="navbar-brand navbar-brand-centered"> <a class="navbar-brand" href="index.html"><img src="COSLogo.png" width="250" height="63" alt=""></a></div>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="camper-application.html">Register <span class="sr-only">(current)</span></a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pictures <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="2016Pics.html">2016</a></li>
+                            <li><a href="2015Pics.html">2015</a></li>
+                            <li><a href="2014Pics.html">2014</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="contactUs.html">Contact Us</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <!-- End of Standard navbar-->
+
+    <h1>Camper Application</h1>
+<br>
+    <form id="registration" action="" method="post">
+        <fieldset>
+            <legend>Camper Info</legend>
+                <!--<h2>Camper Info</h2>-->
+                <div>
+                    <label for="lastName">Last Name</label>
+                    <input type="text" class="required" id="lastname" name="lName">
+                </div>
+                <div>
+                    <label for="firstName">First Name</label>
+                    <input type="text" class="required" id="firstname" name="fName">
+                </div>
+                <div>
+                    <label for="address">Address</label>
+                    <input type="text" class="required" id="address" name="address" placeholder="street and number">
+                </div>
+                <div>
+                    <label for="city">City</label>
+                    <input type="text" class="required" id="city" name="city">
+                </div>
+                <div>
+                    <label for="state">State</label>
+                    <input type="text" class="required" id="state" name="state">
+                </div>
+                <div>
+                    <label for="zipcode">Zipcode</label>
+                    <input type="number" class="required" id="zipcode" name="zipcode">
+                </div>
+                <div>
+                    <label for="homePhone">Home Phone</label>
+                    <input type="tel" class="phone required" id="homePhone" name="homePhone">
+                </div>
+                <div>
+                    <label for="cellPhone">Cell</label>
+                    <input type="tel" class="phone required" id="cellPhone" name="cellPhone">
+                </div>
+                <div>
+                    <label for="currSchool">Current School</label>
+                    <input type="text" class="required" id="currSchool" name="currSchool">
+                </div>
+                <div>
+                    <label for="birthday">Birthday</label>
+                    <input type = text id="birthday" name="birthday">
+                </div>
+
+
+        </fieldset>
+        <br><br>
+        <fieldset>
+            <legend>Parents' Info</legend>
+                <h3 class="parentInfo">Father's Info</h3>
+                <div>
+                    <label for="fatherName">First Name</label>
+                    <input type="text" class="required" id="fatherName" name="fatherName">
+                </div>
+                <div>
+                    <label for="fatherJob">Occupation</label>
+                    <input type="text" class="required" id="fatherJob" name="fatherJob">
+                </div>
+                <div>
+                    <label for="fatherEmail">Email</label>
+                    <input type="email" class="email" id="fatherEmail" name="fatherEmail">
+                </div>
+                <h3 class="parentInfo">Mother's Info</h3>
+                <div>
+                    <label for="motherName">First Name</label>
+                    <input type="text" class="required" id="motherName" name="motherName">
+                </div>
+                <div>
+                    <label for="motherJob">Occupation</label>
+                    <input type="text" class="required" id="motherJob" name="motherJob">
+                </div>
+                <div>
+                    <label for="motherEmail">Email</label>
+                    <input type="email" class="email" id="motherEmail" name="motherEmail">
+                    <span class="invalidEmail"></span>
+                </div>
+        </fieldset>
+<br><br>
+        <fieldset>
+            <legend>Registration Options</legend>
+                <!--
+                <div>
+                <input type="radio" name="slot" value="firstHlaf">July 1 - July 29<br>
+                <input type="radio" name="slot" value="secondHlaf">Aug 1 - Aug 29<br>
+                <input type="radio" name="slot" value="fullSummer">July 1 - Aug 29
+                  </div>
+                !-->
+                <ul id="regOptions">
+                    <li role="button" id="firstHalf" >June 27 - July 25</li>
+                    <li role="button" id="secondHalf">July 26 - August 24</li>
+                    <li role="button" id="fullSummer" >June 27 - Aug 24</li>
+                </ul>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Special Requests</legend>
+            <div>
+                <textarea id="requests"></textarea>
+            </div>
+        </fieldset>
+
+        <div>
+            <input type="submit" id="submit" name="submit" value="Submit">
+        </div>
+        <div id="dialog">
+            <h2>Congratulations!!</h2>
+            <p>Your application has been submitted</p>
+        </div>
+    </form>
+
+    <!-- Beginning of Standard footer-->
+    <footer id= "footer">
+	©2017 COS
+	</footer>
+    <!-- End of Standard navbar-->
+</section>
+</body>
+</html>

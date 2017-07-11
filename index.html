@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<head>
+	 <meta charset= "UTF-8" />
+     <title>Camp Ohr Shraga</title>
+	 <script src="js/detectmobilebrowser.js"></script>
+	 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	 <!--take out!
+	 <script src="js/jquery-1.8.3.js"></script>-->
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	 <link rel="stylesheet" href="JQueryUI/css/smoothness/jquery-ui-1.9.2.custom.min.css">
+	 <link rel="stylesheet" href="cos.css">
+
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	 <script src="js/jquery.countdown.js"></script>
+     <script src="js/jquery.slides.min.js"></script>
+	 <script src="JQueryUI/js/jquery-ui-1.9.2.custom.min.js"></script>
+	 <script type="text/javascript">
+		$(document).ready(function () {
+            $('#clock').countdown('2017/06/27 15:00:00')
+                .on('update.countdown', function(event) {
+                    var format = '%H:%M:%S';
+                    if(event.offset.totalDays > 0) {
+                        format = '%-d day%!d ' + format;
+                    }
+                    if(event.offset.weeks > 0) {
+                        format = '%-w week%!w ' + format;
+                    }
+                    $(this).html(event.strftime(format));
+                })
+                .on('finish.countdown', function(event) {
+                    $(this).html('Camp has Begun!')
+                        .parent().addClass('disabled');
+
+                });
+            $('#slides').slidesjs({
+                width: 400,
+                height: 280,
+                play: {
+                    active: true,
+                    auto: true,
+                    interval: 4000,
+                    swap: true,
+                    pauseOnHover: true,
+                    restartDelay: 2500
+                }
+            });
+		});
+	</script>
+
+	 <style>
+
+	 </style>
+</head>
+
+<body>
+<section id="body">
+	<section id= "main">
+	<!-- Beginning of Standard navbar-->
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display **for small 3 lines when screen minimized**-->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+                <div class="navbar-brand navbar-brand-centered"> <a class="navbar-brand" href="#"><img src="COSLogo.png" width="250" height="63" alt=""></a></div>
+		    </div>
+	
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		        <li><a href="camper-application.html">Register <span class="sr-only">(current)</span></a></li>
+		        <li><a href="faqs.html">FAQs</a></li>
+				  <li class="dropdown">
+                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pictures <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="2016Pics.html">2016</a></li>
+                              <li><a href="2015Pics.html">2015</a></li>
+                              <li><a href="2014Pics.html">2014</a></li>
+                            </ul>
+				  </li>
+
+                     </ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="contactUs.html">Contact Us</a></li>
+					<li><a href="aboutUs.html">About Us</a></li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+	</nav>
+		<!-- End of Standard navbar-->
+		<div><h4 id="title"><i>~The premeir summer camp for Jewish teenage boys~</i></h4></div>
+	<div class="countdown">
+		<p>Time Remaining to Opening Day:
+			<span id="clock"></span>
+		</p>
+	</div>
+
+
+	<div class="jumbotron">
+	  <div class="container">
+	    <h1 id="registerNow">Registration is Now Open For Summer 2017!</h1>
+	  
+	  <p><a class="btn btn-primary btn-md" href="camper-application.html" role="button">Register Online</a></p>
+	  </div>
+	</div>
+
+		<div id="sideContainer">
+	<div class="panel panel-default">
+	  <div class="panel-heading">
+	    <h3 class="panel-title"><strong>Important Dates</strong></h3>
+	  </div>
+	  <div class="panel-body">
+	    <p>First half: June 27 - July 25</p>
+	    <p>Second half: July 26 - Aug 24</p>
+	  </div>
+	</div>
+
+
+
+	</div>
+        <div id="slides">
+			<img src="Pics\DSCN1041(2).jpg">
+            <img src="Pics\20140708_180909.jpg">
+            <img src="Pics\20140727_162400.jpg">
+        </div>
+</section>
+	<!--Beginning of Standard footer-->
+<footer id= "footer">
+	©2017 COS
+</footer>
+	<!--End of Standard footer-->
+</section>
+</body>
+
+
+
